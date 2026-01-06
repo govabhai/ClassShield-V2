@@ -6,6 +6,8 @@
 
 **ClassShield** is a transparent, ethical content moderation prototype designed for educational environments. It combines high-performance machine learning with human oversight to protect students while upholding privacy and institutional trust.
 
+<img src="images/Architecture">
+
 ## 🚀 Core Innovation: The Three-Tier Defense
 ClassShield processes images through a linear, multi-layered safety pipeline:
 1.  **Layer 1 (ML Detection):** Local NudeNet models and Sightengine cloud validation.
