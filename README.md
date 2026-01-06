@@ -65,6 +65,14 @@ The web interface includes comprehensive guides:
 - `/submission`: Judge-ready technical package.
 
 ---
+## Acknowledgments
+
+
+<img src="https://avatars.githubusercontent.com/u/202682181?v=4" width="25%">
+
+**ClassShield is founded and developed by [Anvesh Raman](https://github.com/developeranveshraman)**
+
+---
 
 ## License
 
