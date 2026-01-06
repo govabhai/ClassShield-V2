@@ -1,0 +1,81 @@
+
+{% extends "base.html" %}
+
+{% block title %}System Architecture - ClassShield{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">ClassShield System Architecture</h1>
+    
+    <div class="alert alert-info">
+        <strong>📐 Technical Overview:</strong> This diagram illustrates the complete data flow and component interactions in the ClassShield content safety system.
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-body text-center">
+            <img src="{{ url_for('static', filename='architecture_diagram.png') }}" 
+                 alt="ClassShield Architecture Diagram" 
+                 class="img-fluid rounded"
+                 style="max-width: 100%; height: auto;">
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">🏗️ System Layers</h5>
+                </div>
+                <div class="card-body">
+                    <ol>
+                        <li><strong>User Interface:</strong> Student upload, admin dashboard, screenshot capture</li>
+                        <li><strong>Web Application:</strong> Flask routing and request handling</li>
+                        <li><strong>Processing Pipeline:</strong> Image processing, hashing, skin analysis</li>
+                        <li><strong>Detection Layer:</strong> Three-tier ML detection system</li>
+                        <li><strong>Decision Engine:</strong> Score aggregation and threshold evaluation</li>
+                        <li><strong>Storage & Logging:</strong> Audit trails and review queues</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">🔍 Detection Tiers</h5>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Tier 1 (Local):</strong> NudeNet ML model - Privacy-preserving, on-device processing</li>
+                        <li><strong>Tier 2 (Cloud):</strong> Sightengine API - Validation and fallback detection</li>
+                        <li><strong>Tier 3 (Heuristic):</strong> Advanced skin ratio analysis and contextual keyword detection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header bg-warning">
+            <h5 class="mb-0">⚙️ Data Flow</h5>
+        </div>
+        <div class="card-body">
+            <ol>
+                <li>User uploads image through web interface</li>
+                <li>Flask application receives and processes the image in-memory</li>
+                <li>Image undergoes hash generation (SHA-256) and skin ratio analysis</li>
+                <li>Three detection tiers run in parallel to generate confidence scores</li>
+                <li>Decision engine aggregates scores and applies contextual rules</li>
+                <li>Result classification: SAFE (≤0.15), REVIEW (0.15-0.35), or BLOCK (≥0.35)</li>
+                <li>Flagged items added to admin review queue with risk heatmap</li>
+                <li>Audit log updated and JSON response returned to user</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="text-center mt-4 mb-5">
+        <a href="{{ url_for('index') }}" class="btn btn-primary">← Back to Home</a>
+        <a href="{{ url_for('submission') }}" class="btn btn-secondary">View Full Submission Package</a>
+    </div>
+</div>
+{% endblock %}

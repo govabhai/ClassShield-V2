@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-wrapper">
+    <div class="row mb-5">
+        <div class="col-lg-8">
+            <h1 class="display-4 fw-bold mb-3" style="color: var(--primary-color);">
+                <i class="bi bi-shield-check text-accent"></i> Ethical AI Principles
+            </h1>
+            <p class="lead text-muted">ClassShield is built upon a foundation of responsibility, ensuring that school safety technology respects student dignity and rights.</p>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="card h-100 border-0 bg-light p-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="fw-bold mb-3 text-primary"><i class="bi bi-person-check me-2"></i> Human Sovereignty</h5>
+                    <p class="text-muted mb-0">Algorithms suggest, humans decide. No student content is ever deleted automatically, ensuring context is always considered by a trained administrator.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100 border-0 bg-light p-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="fw-bold mb-3 text-accent"><i class="bi bi-search me-2"></i> Total Transparency</h5>
+                    <p class="text-muted mb-0">We provide full explainability for every flag, showing exact model scores and detection methods to build trust with students and parents.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100 border-0 bg-light p-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="fw-bold mb-3 text-info"><i class="bi bi-lock-fill me-2"></i> Privacy by Design</h5>
+                    <p class="text-muted mb-0">Student privacy is paramount. Images are processed in memory and not permanently stored unless there's an active incident requiring investigation.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100 border-0 bg-light p-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="fw-bold mb-3 text-success"><i class="bi bi-graph-up me-2"></i> Bias Awareness</h5>
+                    <p class="text-muted mb-0">Comprehensive testing across demographics (Fitzpatrick Types I-VI, multiple age groups). We monitor for disparate impact and document limitations. No claims of perfect fairness - human review required for all edge cases.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-info border-0 shadow-sm" style="background: #ebf8ff;">
+        <i class="bi bi-info-circle-fill text-primary me-2"></i> These principles are integrated into every line of code in ClassShield, from the multi-tier detection logic to the admin review workflow.
+    </div>
+
+    <div class="mt-4">
+        <a href="/privacy" class="btn btn-primary me-2">Privacy Policy</a>
+        <a href="/bias-testing" class="btn btn-outline-secondary">Fairness Report</a>
+    </div>
+</div>
+{% endblock %}

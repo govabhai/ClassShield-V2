@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-wrapper">
+    <h2 class="mb-4"><i class="bi bi-megaphone"></i> Appeals Management</h2>
+    
+    <div class="alert alert-warning">
+        <i class="bi bi-exclamation-triangle"></i> <strong>Priority Review:</strong> These items have been flagged by users for secondary review. Please examine the context and vision analysis carefully before making a final determination.
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card p-3 bg-warning text-dark">
+                <h6>Pending Appeals</h6>
+                <h2 id="pendingAppealsCount">-</h2>
+            </div>
+        </div>
+    </div>
+
+    <div id="appealsQueue">
+        <p class="text-muted">Loading appeals...</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+async function loadAppeals() {
+    try {
+        const response = await fetch('/api/flagged');
+        const items = await response.json();
+        
+        const appeals = items.filter(i => i.review_status === 'pending_appeal');
+        document.getElementById('pendingAppealsCount').textContent = appeals.length;
+        
+        const queue = document.getElementById('appealsQueue');
+        if (appeals.length === 0) {
+            queue.innerHTML = '<div class="text-center py-5"><i class="bi bi-check-circle text-success display-1"></i><p class="mt-3">No pending appeals at this time.</p></div>';
+            return;
+        }
+        
+        queue.innerHTML = appeals.map(item => `
+            <div class="card mb-4 border-warning shadow-sm">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h5 class="card-title text-danger">Appeal for Image ${item.image_hash.substring(0, 8)}</h5>
+                            <p class="text-muted small">Flagged: ${new Date(item.flagged_at).toLocaleString()}</p>
+                            
+                            <div class="alert alert-info mb-3">
+                                <strong>Original Reason:</strong> ${item.reason}
+                            </div>
+                            
+                            ${item.anvesh_vision_analysis ? `
+                                <div class="bg-light p-3 rounded mb-3">
+                                    <strong>AI Analysis:</strong><br>
+                                    <small>${item.anvesh_vision_analysis}</small>
+                                </div>
+                            ` : ''}
+                            
+                            ${item.heatmap ? `
+                                <div class="text-center bg-dark p-2 rounded">
+                                    <img src="${item.heatmap}" class="img-fluid rounded" style="max-height: 400px; display: block; margin: 0 auto; border: 2px solid #fff;">
+                                </div>
+                            ` : `
+                                <div class="alert alert-warning">
+                                    <i class="bi bi-exclamation-circle"></i> No visual evidence (heatmap) found.
+                                </div>
+                            `}
+                        </div>
+                        <div class="col-md-4 d-flex flex-column justify-content-center">
+                            <button class="btn btn-success mb-2" onclick="resolveAppeal(${item.id}, 'approved')">
+                                <i class="bi bi-check-lg"></i> Grant Appeal (Approve)
+                            </button>
+                            <button class="btn btn-danger" onclick="resolveAppeal(${item.id}, 'rejected')">
+                                <i class="bi bi-x-lg"></i> Deny Appeal (Reject)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    } catch (error) {
+        console.error('Error loading appeals:', error);
+    }
+}
+
+async function resolveAppeal(itemId, action) {
+    if (!confirm(`Are you sure you want to ${action === 'approved' ? 'grant' : 'deny'} this appeal?`)) return;
+    try {
+        const response = await fetch(`/api/review/${itemId}/${action}`, { method: 'POST' });
+        const result = await response.json();
+        if (result.success) {
+            loadAppeals();
+        } else {
+            alert('Error: ' + result.message);
+        }
+    } catch (error) {
+        alert('Error resolving appeal: ' + error.message);
+    }
+}
+
+loadAppeals();
+setInterval(loadAppeals, 5000);
+</script>
+{% endblock %}

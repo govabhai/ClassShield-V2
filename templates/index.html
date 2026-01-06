@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="py-5">
+    <div class="row align-items-center mb-5 g-5">
+        <div class="col-lg-7 text-start">
+            <div class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3 fw-bold">
+                <i class="bi bi-patch-check-fill me-1"></i> Ethical AI First
+            </div>
+            <h1 class="display-3 fw-extrabold mb-4 tracking-tight" style="color: var(--primary-color); font-weight: 900;">
+                Protecting Every <span class="text-primary text-gradient">Classroom</span>
+            </h1>
+            <p class="lead mb-5 text-secondary" style="font-size: 1.25rem; line-height: 1.6;">
+                ClassShield provides state-of-the-art school content safety powered by <strong>Llama Vision 90B</strong>. 
+                Our multi-layered approach ensures student safety while upholding institutional privacy.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+                <a href="/upload" class="btn btn-primary btn-lg shadow-sm">
+                    <i class="bi bi-rocket-takeoff me-2"></i> Get Started
+                </a>
+                <a href="/ethical-ai" class="btn btn-light btn-lg border">
+                    Safety Policy
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="position-relative">
+                <div class="p-5 bg-white shadow-xl rounded-4 text-center border animate-float">
+                    <div class="display-1 text-primary mb-4">
+                        <i class="bi bi-shield-lock-fill"></i>
+                    </div>
+                    <div class="h4 fw-bold">ClassShield Active</div>
+                    <p class="text-muted small">Real-time school safety monitoring enabled</p>
+                    <div class="d-flex justify-content-center gap-2 mt-3">
+                        <div class="spinner-grow spinner-grow-sm text-success" role="status"></div>
+                        <span class="small fw-semibold text-success">Llama Vision Online</span>
+                    </div>
+                </div>
+                <!-- Decorative elements -->
+                <div class="position-absolute top-0 start-0 translate-middle p-4 bg-info bg-opacity-10 rounded-circle blur-3xl z-n1" style="width: 300px; height: 300px;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card h-100 p-2">
+                <div class="card-body p-4">
+                    <div class="bg-primary bg-opacity-10 text-primary rounded-3 d-inline-flex p-3 mb-4">
+                        <i class="bi bi-cpu fs-3"></i>
+                    </div>
+                    <h5 class="fw-bold mb-3">Local Detection</h5>
+                    <p class="text-secondary">On-device NudeNet classifier ensures instant primary detection with zero student data leakage.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 p-2">
+                <div class="card-body p-4">
+                    <div class="bg-info bg-opacity-10 text-info rounded-3 d-inline-flex p-3 mb-4">
+                        <i class="bi bi-cloud-check fs-3"></i>
+                    </div>
+                    <h5 class="fw-bold mb-3">Llama Vision 90B</h5>
+                    <p class="text-secondary">Advanced vision analysis provides deep contextual understanding through high-speed Groq inference.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 p-2">
+                <div class="card-body p-4">
+                    <div class="bg-success bg-opacity-10 text-success rounded-3 d-inline-flex p-3 mb-4">
+                        <i class="bi bi-people-fill fs-3"></i>
+                    </div>
+                    <h5 class="fw-bold mb-3">Human Oversight</h5>
+                    <p class="text-secondary">No automated deletions. Final decisions are always made by trained school administrators.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .text-gradient {
+            background: linear-gradient(135deg, var(--accent-color), #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .shadow-xl {
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</div>
+{% endblock %}

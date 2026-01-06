@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-wrapper">
+    <div class="row mb-5">
+        <div class="col-lg-8">
+            <h1 class="display-4 fw-bold mb-3" style="color: var(--primary-color);">
+                <i class="bi bi-exclamation-triangle-fill text-warning"></i> Legal Disclaimer
+            </h1>
+            <p class="lead text-muted">Important information regarding the scope, limitations, and intended use of the ClassShield safety system prototype.</p>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="card h-100 border-0 bg-light shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3 text-danger"><i class="bi bi-bug me-2"></i> Not 100% Accurate</h5>
+                    <p class="small text-muted mb-0">This system will make mistakes. AI can produce false positives (flagging safe content) and false negatives (missing harmful content). Human oversight is mandatory.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100 border-0 bg-light shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3 text-primary"><i class="bi bi-laptop me-2"></i> Prototype Status</h5>
+                    <p class="small text-muted mb-0">This is a demonstration prototype for evaluation. It is not intended for high-stakes production environments without further security hardening and testing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-danger border-0 shadow-sm" style="background: #fff5f5;">
+        <i class="bi bi-exclamation-octagon-fill text-danger me-2"></i> <strong>Liability Notice:</strong> The developers make no warranties about accuracy and assume no liability for decisions made based on system output.
+    </div>
+
+    <div class="mt-4">
+        <a href="/deployment" class="btn btn-primary me-2">Deployment Plan</a>
+        <a href="/" class="btn btn-outline-secondary">Return Home</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-wrapper">
+    <div class="row mb-5 text-center">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="display-4 fw-bold mb-3" style="color: var(--primary-color);">
+                <i class="bi bi-book-half text-accent"></i> Digital Safety Education
+            </h1>
+            <p class="lead text-muted">Empowering students with the knowledge to navigate the digital world safely and responsibly.</p>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card h-100 border-0 bg-light shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3 text-primary"><i class="bi bi-shield-check me-2"></i> Why Scan?</h5>
+                    <p class="small text-muted">Safety systems act as a protective layer, helping keep our school community focused on learning by identifying potentially harmful content before it spreads.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 bg-light shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3 text-success"><i class="bi bi-people-fill me-2"></i> Human Review</h5>
+                    <p class="small text-muted">AI makes mistakes. That's why every flag is reviewed by a real person who understands context, like art projects or beach photos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 bg-light shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3 text-accent"><i class="bi bi-lock-fill me-2"></i> Your Privacy</h5>
+                    <p class="small text-muted">We respect your digital boundaries. Images are scanned in real-time and never stored on our servers. Your identity remains private.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="card h-100 border-0 bg-light p-4 shadow-sm">
+                <h5 class="fw-bold mb-3 text-success"><i class="bi bi-check-circle me-2"></i> Do</h5>
+                <ul class="small text-muted mb-0">
+                    <li>Think before you share</li>
+                    <li>Respect others' privacy and consent</li>
+                    <li>Use school accounts for educational purposes</li>
+                    <li>Report concerning content to a trusted adult</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100 border-0 bg-light p-4 shadow-sm">
+                <h5 class="fw-bold mb-3 text-danger"><i class="bi bi-x-circle me-2"></i> Don't</h5>
+                <ul class="small text-muted mb-0">
+                    <li>Share images without consent</li>
+                    <li>Post or share inappropriate content</li>
+                    <li>Be afraid to ask for help if content is flagged</li>
+                    <li>Assume the AI is always correct</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <a href="/" class="btn btn-primary btn-lg">Back to Homepage</a>
+    </div>
+</div>
+{% endblock %}
